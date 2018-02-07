@@ -14,6 +14,7 @@ def collatz_concise(q):
             return [q]
         return [q] + collatz_concise(q / 2 if not q % 2 else q * 3 + 1)
 
+'''Optional line for smaller ranges but I would advise against it'''
 #  print(len(collatz_concise(63728127))-1)
 
 
@@ -52,6 +53,9 @@ def running_mean(x, N):
 p = plt.figure()
 plt.plot(array, big_data, 'ro', markersize=1.0)
 plt.plot(running_mean(big_data, N))
+'''Uncomment these lines to create a histogram of sequence lengths.
+   To do this, you must comment out the scatterplot and moving average
+   calls just above this'''
 #  v, bins, patches = plt.hist(big_data, 100, normed=1, facecolor='g', alpha=0.75)
 #  plt.ylabel('Frequency')
 #  plt.xlabel('Length of Collatz Sequence')
