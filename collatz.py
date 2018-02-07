@@ -72,7 +72,7 @@ if q1 == 'y':
     with open('collatz_data5.csv', 'w') as f:
         Data.to_csv(f, sep=',')
 else:
-    quit()
+    pass
 
 
 plt.show()
